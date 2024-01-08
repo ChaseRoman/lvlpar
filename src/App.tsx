@@ -1,24 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Calendar from "./components/Calendar";
+import Forms from "./components/Forms";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import Home from "./components/Home";
+import Scores from "./components/Scores";
 
 function App() {
+  const [homeVisible, setHomeVisibility] = useState(true);
+  const [calendarVisible, setCalendarVisibility] = useState(false);
+  const [formsVisible, setFormsVisibility] = useState(false);
+  const [scoresVisible, setScoresVisibility] = useState(false);
+
+  const resetVisibility = () => {
+    setHomeVisibility(false);
+    setCalendarVisibility(false);
+    setFormsVisibility(false);
+    setScoresVisibility(false);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Header />
+        <Nav
+          handleHomeVisibility={() => {
+            resetVisibility();
+            setHomeVisibility(true);
+          }}
+          handleCalendarVisibility={() => {
+            resetVisibility();
+            setCalendarVisibility(true);
+          }}
+          handleFormsVisibility={() => {
+            resetVisibility();
+            setFormsVisibility(true);
+          }}
+          handleScoresVisibility={() => {
+            resetVisibility();
+            setScoresVisibility(true);
+          }}
+        />
       </header>
+      {homeVisible && <Home />}
+      {calendarVisible && <Calendar />}
+      {formsVisible && <Forms />}
+      {scoresVisible && <Scores />}
     </div>
   );
 }
