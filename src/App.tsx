@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import "./App.scss";
 import Calendar from "./components/Calendar";
 import Forms from "./components/Forms";
 import Header from "./components/Header";
@@ -43,10 +43,12 @@ function App() {
           }}
         />
       </header>
-      {homeVisible && <Home />}
-      {calendarVisible && <Calendar />}
-      {formsVisible && <Forms />}
-      {scoresVisible && <Scores />}
+      <div className="App-body">
+        {homeVisible && <Home />}
+        {calendarVisible && <Calendar />}
+        {formsVisible && <Forms />}
+        {scoresVisible && <Scores />}
+      </div>
     </div>
   );
 }
