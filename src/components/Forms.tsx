@@ -5,7 +5,6 @@ const Forms = () => {
     {
       src: "https://docs.google.com/forms/d/e/1FAIpQLSfloZupPBBry8TfQrHNIIS5KuJAcJrgKqw5ajDAZKRos9ycgg/viewform?embedded=true",
       header: "March",
-      current: "true",
     },
     {
       src: "https://docs.google.com/forms/d/e/1FAIpQLSfEc07lhcq2EOp5o7xnRqoNtzGBX8R0Rnoy8Es27XCE_OeYhA/viewform?embedded=true",
@@ -36,17 +35,15 @@ const Forms = () => {
   return (
     <div className="row justify-content-center">
       <div
-        className="Forms accordion col-11 col-sm-10 col-md-8"
+        className="Forms accordion col col-sm-10 col-md-8"
         id="formsAccordion"
       >
-        {IFRAME_SOURCES.map(({ src, header, current }, i) => {
+        {IFRAME_SOURCES.map(({ src, header }, i) => {
           return (
             <div className="accordion-item" key={i}>
               <h2 className="accordion-header">
                 <button
-                  className={
-                    "accordion-button" + (!current ? " collapsed" : "")
-                  }
+                  className={"accordion-button collapsed"}
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target={"#collapse" + header}
@@ -58,14 +55,16 @@ const Forms = () => {
               </h2>
               <div
                 id={"collapse" + header}
-                className={
-                  "accordion-collapse collapse" + (current ? " show" : "")
-                }
+                className={"accordion-collapse collapse"}
                 data-bs-parent="#formsAccordion"
               >
                 <div className="accordion-body">
                   <div className="Form">
-                    <iframe title={header + " Form"} src={src} />
+                    <iframe
+                      title={header + " Form"}
+                      src={src}
+                      className="w-100"
+                    />
                   </div>
                 </div>
               </div>

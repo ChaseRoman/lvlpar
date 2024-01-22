@@ -1,6 +1,9 @@
+.Form {
+  background: url(../assets/loading.gif) top center no-repeat;
+}
+
 .Form iframe {
-  width: 100%;
-  height: 1700px;
+  height: 1000px;
 }
 
 @media (min-width: 550px) {
