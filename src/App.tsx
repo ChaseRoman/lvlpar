@@ -22,32 +22,36 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <Header />
-        <Nav
-          handleHomeVisibility={() => {
-            resetVisibility();
-            setHomeVisibility(true);
-          }}
-          handleCalendarVisibility={() => {
-            resetVisibility();
-            setCalendarVisibility(true);
-          }}
-          handleFormsVisibility={() => {
-            resetVisibility();
-            setFormsVisibility(true);
-          }}
-          handleScoresVisibility={() => {
-            resetVisibility();
-            setScoresVisibility(true);
-          }}
-        />
+      <header className="App-header p-4">
+        <div className="container">
+          <Header />
+          <Nav
+            handleHomeVisibility={() => {
+              resetVisibility();
+              setHomeVisibility(true);
+            }}
+            handleCalendarVisibility={() => {
+              resetVisibility();
+              setCalendarVisibility(true);
+            }}
+            handleFormsVisibility={() => {
+              resetVisibility();
+              setFormsVisibility(true);
+            }}
+            handleScoresVisibility={() => {
+              resetVisibility();
+              setScoresVisibility(true);
+            }}
+          />
+        </div>
       </header>
-      <div className="App-body">
-        {homeVisible && <Home />}
-        {calendarVisible && <Calendar />}
-        {formsVisible && <Forms />}
-        {scoresVisible && <Scores />}
+      <div className="App-body my-4">
+        <div className="container">
+          {homeVisible && <Home />}
+          {calendarVisible && <Calendar />}
+          {formsVisible && <Forms />}
+          {scoresVisible && <Scores />}
+        </div>
       </div>
     </div>
   );
