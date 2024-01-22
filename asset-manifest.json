@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/lvlpar/static/css/main.f7483aae.css",
+    "main.css": "/lvlpar/static/css/main.9b3ff197.css",
     "main.js": "/lvlpar/static/js/main.6d502428.js",
     "static/js/787.c9d52736.chunk.js": "/lvlpar/static/js/787.c9d52736.chunk.js",
     "static/media/lvlpar-logo.png": "/lvlpar/static/media/lvlpar-logo.31d308142b14aba3686f.png",
     "static/media/loading.gif": "/lvlpar/static/media/loading.326ba1c61d527c7b0186.gif",
     "index.html": "/lvlpar/index.html",
-    "main.f7483aae.css.map": "/lvlpar/static/css/main.f7483aae.css.map",
+    "main.9b3ff197.css.map": "/lvlpar/static/css/main.9b3ff197.css.map",
     "main.6d502428.js.map": "/lvlpar/static/js/main.6d502428.js.map",
     "787.c9d52736.chunk.js.map": "/lvlpar/static/js/787.c9d52736.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7483aae.css",
+    "static/css/main.9b3ff197.css",
     "static/js/main.6d502428.js"
   ]
 }
